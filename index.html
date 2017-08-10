@@ -2,19 +2,90 @@
 <html>
 <head>
 		<title>Hangman</title>
-	
-		<script type="text/javascript" src="assets/Javascript/game.js"></script>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Personal Style Sheet-->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		
 </head>
 
 <body>
 
-<p>The Obnoxious Hang</p>
+<div class="page-header">
+  <h1>Hangman<small> The obnoxious one</small></h1>
+</div>
 
-<p id="wordInPlay"></p>
+<div class = "conatiner-fluid">
+<div class = "row">
+	<div class = "col-md-4 col-md-offset-2" id="first">
+		<p>Game Word</p>
+	</div>
+	<div class = "col-md-4" id = "first">
+		<p id="wordInPlay"></p>
+	</div>
+</div>
 
-<p id="count"> </p>
+<div class = "row">
+	<div class = "col-md-4 col-md-offset-2" id="second">
+		<p>Guesses Left</p>
+	</div>
+	<div class = "col-md-4" id="second">
+		<p id="count"></p>
+	</div>
+</div>
 
-<p id="chances">
+<div class = "row">
+	<div class = "col-md-4 col-md-offset-2" id="third">
+		<p>Letters Used</p>
+	</div>
+	<div class = "col-md-4" id="third">
+		<p id="chances"></p>
+	</div>
+</div>	
+
+<div class = "row">
+	<div class = "col-md-4 col-md-offset-2" id="fourth">
+		<p>Number of Wins</p>
+	</div>
+	<div class = "col-md-4" id="fourth">
+		<p id="win"> </p>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "col-md-4 col-md-offset-2" id="fifth">
+		<p>Number of Losses</p>
+	</div>
+	<div class = "col-md-4" id="fifth">
+		<p id="losses"> </p>
+	</div>
+</div>
+
+<div class="row">
+	<div class = "col-md-2 col-md-offset-5" style="align-content: center;">
+	<div class="btn">
+	<button type="button" class="btn btn-default" id = "reset">Reset</button>
+	</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
 
 </body>
+<script type="text/javascript" src="assets/Javascript/game.js"></script>
 </html>

@@ -4,10 +4,16 @@
   var correctGuesses  = [];
   var gameWord;
   var allowedGuesses = 10;
+  var winCount = 0;
+  var lossCount = 0;
 
+//html element variables
   var wordInPlay = document.getElementById("wordInPlay");
   var letterCount = document.getElementById("count");
   var chancesLeft = document.getElementById("chances");
+  var numberWin = document.getElementById("win");
+  var numberLoss = document.getElementById("losses");
+
 
 //An array conatining words for game. AKA "Word Bank"
   words = ['texas','cow','hot','dry'];
@@ -17,12 +23,13 @@
 
   //console.log(gameWord.length);
 
+
 /*Takes the word being played. Determines the length of the word. Pushes an "_" into the correctGuesses array in replacement of the 
 word's vowels/consonant*/
 function startGame() {
   for(var i = 0; i < gameWord.length; i++){
     correctGuesses.push('_'); 
-    console.log(correctGuesses.length);
+    //console.log(correctGuesses.length);
   }
 }
 
@@ -56,18 +63,33 @@ function gameStats(letter){
 
 function win(){
   if (correctGuesses.indexOf('_') === -1){
+    winCount++;
     alert("Congrats, you are a true Texan");
+    
   } else if (allowedGuesses === 0){
+    lossCount++;
     alert("You must be a Yankee");
   }
-}
+    numberWin.innerHTML = winCount;
+    numberLoss.innerHTML = lossCount;
 
+}
 
 //listens to the key being pressed
   document.onkeyup = function (event) {
-    var letter = String.fromCharCode(event.keyCode).toLowerCase();
-    gameStats(letter);
+    var currentLetter = String.fromCharCode(event.keyCode).toLowerCase();
+    gameStats(currentLetter);
     win();
-};
+}
 
-startGame();
+document.getElementById('reset').onclick = function() {
+    wordInPlay.parentNode.removeChild(wordInPlay);
+    chances.parentNode.removeChild(chances);
+    letterCount.parentNode.removeChild(letterCount);
+  }
+
+
+  startGame();
+
+ 
+

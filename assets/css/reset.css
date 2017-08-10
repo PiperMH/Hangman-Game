@@ -1,0 +1,41 @@
+.page-header{
+	background-color: #000000;
+	opacity: .5;
+	height: 100px;
+	padding: 10px;
+}
+
+#first{
+	background-color: #0066ff;
+	opacity: .5;
+	height:50px; 
+	font-size: 30px;
+}
+
+#second{
+	background-color: #1a75ff;
+	opacity: .5;
+	height:50px; 
+	font-size: 30px;
+}
+
+#third{
+	background-color: #338fff;
+	opacity: .5;
+	height:50px;
+	font-size: 30px;
+}
+
+#fourth{
+	background-color: #4d94ff;
+	opacity: .5;
+	height:50px; 
+	font-size: 30px;
+}
+
+#fifth{
+	background-color: #66a3ff;
+	opacity: .5;
+	height:50px; 
+	font-size: 30px;
+}
