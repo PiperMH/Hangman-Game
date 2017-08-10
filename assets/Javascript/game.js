@@ -85,7 +85,7 @@ function win(){
 document.getElementById('reset').onclick = function() {
     wordInPlay.parentNode.removeChild(wordInPlay);
     chances.parentNode.removeChild(chances);
-    letterCount.parentNode.removeChild(letterCount);
+    letterCount.parentNode.replaceChild(letterCount);
   }
 
 
