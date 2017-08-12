@@ -1,3 +1,4 @@
+
 //Declaring variables for game
   var words = [];
   var wrongGuesses = [];
@@ -82,14 +83,11 @@ function win(){
     win();
 }
 
-document.getElementById('reset').onclick = function() {
-    wordInPlay.parentNode.removeChild(wordInPlay);
-    chances.parentNode.removeChild(chances);
-    letterCount.parentNode.replaceChild(letterCount);
-  }
+$( "button" ).click(function() {
+  $( "#chances" ).remove();
+  $("#wordInPlay").remove();
+  $("#count").remove();
+});
 
 
-  startGame();
-
- 
-
+startGame();
