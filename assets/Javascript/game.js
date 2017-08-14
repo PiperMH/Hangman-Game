@@ -15,6 +15,9 @@
   var numberWin = document.getElementById("win");
   var numberLoss = document.getElementById("losses");
 
+//to adjust error in game, should create and array holding the alphabet
+//Then should push letters to array holding word in play.
+//Pushing and pulling letters in function instead of all at once
 
 //An array conatining words for game. AKA "Word Bank"
   words = ['texas','cow','hot','dry'];
